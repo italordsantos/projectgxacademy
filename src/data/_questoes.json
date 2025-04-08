@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "nivel": "proficiency",
+    "pergunta": "<p>Analise o desenho da transação Funcionário à seguir. Foi solicitado uma listagem de todos os produtos que o funcionário utilizou ao longo do uso do sistema, para isto, um mesmo produto não deve-se repetir.</p><p>&nbsp;</p><img src='/img/questoes/5301f1ee-1485-4b09-82cc-361851639813.png' alt='Transação Funcionário' /> <img src='/img/questoes/22d08b82-05b0-4efe-adab-82cbf82aa592.png' alt='Procedimento printa dados' /><p>&nbsp;</p><p>Dado o desenho aperesentado, é correto afirmar que está sendo cumprido o que se pede?<p>&nbsp;</p>O que não foi apresentado é porque não é relavante e não altera na resolução.</p>",
+    "alternativas": [
+      "<b>Boolean</b>",
+      "<i>Integer</i>",
+      "<code>String</code>",
+      " asdasda asd asd asds <img src='/img/questoes/cfc69333-a556-4585-9380-1b7fdddfedb2.png' alt='Date' /> Date"
+    ],
+    "correta": 0,
+    "peso": 8.26,
+    "explicacao": "A função `isValid()` retorna um valor Boolean indicando se o conteúdo é válido ou não."
+  },
+  {
+    "id": "2",
+    "nivel": "proficiency",
+    "pergunta": "Qual o evento padrão de carregamento de dados em uma Web Panel?",
+    "alternativas": [
+      "Start",
+      "Load",
+      "Refresh",
+      "Submit"
+    ],
+    "correta": 1,
+    "peso": 6.3,
+    "explicacao": "O evento Load é responsável por carregar os dados exibidos na tela de forma iterativa."
+  },
+  {
+    "id": "3",
+    "nivel": "core",
+    "pergunta": "O que é um Data Provider em GeneXus?",
+    "alternativas": [
+      "Um evento",
+      "Uma variável",
+      "Uma estrutura de dados",
+      "Um objeto para carregar SDTs"
+    ],
+    "correta": 3,
+    "peso": 5.0,
+    "explicacao": "Data Providers são usados para popular estruturas de dados complexas, como SDTs."
+  }
+]

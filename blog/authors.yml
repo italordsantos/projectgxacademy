@@ -1,0 +1,20 @@
+yangshun:
+  name: Yangshun Tay
+  title: Front End Engineer @ Facebook
+  url: https://github.com/yangshun
+  image_url: https://github.com/yangshun.png
+  page: true
+  socials:
+    x: yangshunz
+    github: yangshun
+
+italordsantos:
+  name: Italo Rodrigues
+  title: Analista Genexus
+  image_url: https://avatars.githubusercontent.com/u/23432886
+  page:
+    # customize the url of the author page at /blog/authors/<permalink>
+    permalink: '/italordsantos'
+  socials:
+    linkedin: italordsantos
+    github: italordsantos

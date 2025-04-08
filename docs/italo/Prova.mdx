@@ -1,0 +1,75 @@
+import React, { useState } from 'react';
+
+export default function Prova1() {
+  const [respostas, setRespostas] = useState({});
+  const [corrigido, setCorrigido] = useState(false);
+
+  const questoes = [
+    {
+      id: 'q1',
+      pergunta: 'Qual o tipo de dado retornado pela função isValid() em GeneXus?',
+      alternativas: ['Boolean', 'Integer', 'String', 'Date'],
+      correta: 0,
+    },
+    {
+      id: 'q2',
+      pergunta: 'Qual o evento padrão de carregamento de dados em uma Web Panel?',
+      alternativas: ['Start', 'Load', 'Refresh', 'Submit'],
+      correta: 1,
+    },
+  ];
+
+  const handleSelect = (id, index) => {
+    setRespostas({ ...respostas, [id]: index });
+  };
+
+  const corrigir = () => {
+    setCorrigido(true);
+  };
+
+  const acertos = questoes.filter(q => respostas[q.id] === q.correta).length;
+  const total = questoes.length;
+
+  return (
+    <div>
+      <h1>Prova 1</h1>
+
+      {questoes.map((q, i) => (
+        <div key={q.id} style={{ marginBottom: '2rem', padding: '1rem', border: '1px solid #ccc', borderRadius: '10px' }}>
+          <strong>{i + 1}. {q.pergunta}</strong>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            {q.alternativas.map((alt, idx) => {
+              const selecionada = respostas[q.id] === idx;
+              const correta = corrigido && idx === q.correta;
+              const errada = corrigido && selecionada && idx !== q.correta;
+
+              return (
+                <li key={idx} style={{
+                  margin: '8px 0',
+                  padding: '8px',
+                  backgroundColor: correta ? '#c8e6c9' : errada ? '#ffcdd2' : selecionada ? '#e0e0e0' : '#fff',
+                  borderRadius: '5px',
+                  cursor: 'pointer'
+                }} onClick={() => handleSelect(q.id, idx)}>
+                  {alt}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ))}
+
+      <button onClick={corrigir} style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer', marginTop: '20px' }}>
+        Corrigir
+      </button>
+
+      {corrigido && (
+        <div style={{ marginTop: '2rem', padding: '1rem', backgroundColor: '#f0f4c3', borderRadius: '10px' }}>
+          <h2>Resultado</h2>
+          <p>Você acertou <strong>{acertos}</strong> de <strong>{total}</strong> perguntas.</p>
+          <p>Percentual de acertos: <strong>{Math.round((acertos / total) * 100)}%</strong></p>
+        </div>
+      )}
+    </div>
+  );
+}
