@@ -137,4 +137,98 @@ endfor`}</code></pre>
             </>
         ),
     },
+    {
+        id: '4',
+        nivel: 'proficiency',
+        pergunta: (
+            <>
+                Quais objetos Genexus podem ser expostos como WebService Rest à partir do Objeto API?
+            </>
+        ),
+        alternativas: [
+            <>
+            Business Component e Data Provider
+            </>,
+            <>
+            Data Provider e Procedure
+            </>,
+            <>
+            Procedure e Data Provider
+            </>,
+            <>
+            Procedure, Data Provider e Business Component
+            </>,
+          ],          
+        correta: 1,
+        peso: 2,
+        explicacao: (
+            <>
+                O Business Component não pode ser declado explícitamente como fazemos para um Data Provider e Procedure.
+            </>
+        ),
+    },
+    {
+        id: '5',
+        nivel: 'proficiency',
+        pergunta: (
+            <>
+                Podemos acessar o modo que o Business Component (BC) está em determinado momento conferindo a propriedade Mode. Ela é do tipo de domínio TrnMode, cujas opções são Insert(INS), Update(UPD), Display(DSP) e Delete (DLT). Pois bem, aqui temos criado uma transação Pessoa. Criamos um data provider que retorna uma pessoa à partir do seu código. Após fazer o load completo de todas as informações desta pessoa à partir do Data Provider, determine o modo em que se encontra o BC ao imprimí-lo no msg.
+                <br />
+                <i>Vamos considerar que exista a pessoa com o código 1 buscado.</i>
+                <br />
+                <img src="/gxacademy/img/questoes/b9ec6743-41c5-41ea-a5d2-0d30f47f226b.jpg" alt="Imagem" style={{ maxWidth: '100%', marginTop: '1rem', marginBottom: '1rem' }} />
+            </>
+        ),
+        alternativas: [
+            <>
+            Insert
+            </>,
+            <>
+            Update
+            </>,
+            <>
+            Este código não irá compilar, pois um Data Provider não consegue retornar um BC. A maneira correta de carregar esta pessoa seria à partir do método Pessoa.Load(1), o qual fará com que o BC fique em modo Update.
+            </>,
+            <>
+            Nenhuma das opções anteriores
+            </>,
+          ],          
+        correta: 0,
+        peso: 2,
+        explicacao: (
+            <>
+                Quando um Data Provider retorna um BC, ele fica em modo Insert
+            </>
+        ),
+    },
+    {
+        id: '6',
+        nivel: 'proficiency',
+        pergunta: (
+            <>
+                Uma variável do tipo Business Component (&BC) entra em modo Update em quais das seguintes situações?
+            </>
+        ),
+        alternativas: [
+            <>
+            Apenas quando é executado &BC.Load() ou &BC.Update(), pois ambas recuperam ou manipulam dados já existentes.
+            </>,
+            <>
+            Após um &BC.Insert() bem-sucedido, já que ele transforma o BC de modo Insert para Update. Além, é claro, do próprio &BC.Load().
+            </>,
+            <>
+            Ao utilizar qualquer um dos métodos: &BC.Load(), &BC.Update(), &BC.Save() ou &BC.InsertOrUpdate().
+            </>,
+            <>
+            Apenas quando o método &BC.Load() é utilizado, pois é o único que acessa dados já gravados. Ao fazer um `&BC = new()`, popular e concluir com sucesso um &BC.Insert(), ele continuará como insert para que seja possível inserir novos registros na base de dados.
+            </>,
+          ],          
+        correta: 2,
+        peso: 2,
+        explicacao: (
+            <>
+                Quando um Data Provider retorna um BC, ele fica em modo Insert
+            </>
+        ),
+    }
 ];

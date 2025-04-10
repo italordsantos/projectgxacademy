@@ -1,7 +1,7 @@
 // src/pages/quiz.tsx
 
 import React, { useEffect, useState } from 'react';
-import { questoesBanco, Questao } from '../data/Questoes';
+import { questoesBanco, Questao } from '../data/questoes';
 
 type Resultado = {
   notaTotal: string;
