@@ -20,11 +20,11 @@ const QuizPage: React.FC = () => {
 
   useEffect(() => {
     const filtradas = questoesBanco.filter(q => q.nivel === nivel);
-    const embaralhadas = filtradas.sort(() => 0.5 - Math.random());
-    const selecionadas = embaralhadas.slice(0, quantidade);
-    setQuestoes(selecionadas);
+    //const embaralhadas = filtradas.sort(() => 0.5 - Math.random());
+    //const selecionadas = embaralhadas.slice(0, quantidade);
+    setQuestoes(filtradas);
 
-    const somaPesos = selecionadas.reduce((acc, q) => acc + q.peso, 0);
+    const somaPesos = filtradas.reduce((acc, q) => acc + q.peso, 0);
     setTotalPeso(somaPesos);
   }, [nivel, quantidade]);
 
@@ -66,7 +66,7 @@ const QuizPage: React.FC = () => {
           </div>
 
           {q.alternativas.map((alt, i) => {
-            const isCorreta = i === q.correta;
+            const isCorreta = (i+1) === q.correta;
             const isSelecionada = respostas[q.id] === i;
 
             let cor = '';
