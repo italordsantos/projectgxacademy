@@ -158,7 +158,7 @@ endfor`}</code></pre>
                 <b>B.</b> Data Provider e Procedure
             </>,
             <>
-                <b>C.</b> Procedure e Data Provider
+                <b>C.</b> Procedure e Business Component
             </>,
             <>
                 <b>D.</b> Procedure, Data Provider e Business Component
@@ -259,7 +259,7 @@ endfor`}</code></pre>
                 <b>B.</b> Não, é preciso repensar o modelo de transações
             </>,
         ],
-        correta: 3,
+        correta: 2,
         peso: 3,
         explicacao: (
             <>
